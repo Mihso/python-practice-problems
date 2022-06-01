@@ -24,10 +24,10 @@
 #     result: "   19"
 
 def pad_left(number, length, pad):
-    final_string = str(number)
-    stin_length = len(final_string)
+    final_string = str(number) # converts integer to string
+    stin_length = len(final_string) # gets length of converted integer
     for i in range(0,length - stin_length): #loops based on given length.
-        final_string = pad + final_string
+        final_string = pad + final_string # adds pad to the final string
     return final_string
 
 print(pad_left(11,5,"*"))
