@@ -13,3 +13,13 @@
 #     * input:   3
 #       returns: 1/2 + 2/3 + 3/4
 
+def sum_fraction_sequence(num):
+    final_string = ""
+    for i in range(1, num+1):
+        if i == 1:
+            final_string = final_string + str(i)+"/"+str(i+1)
+        else:
+            final_string = final_string + " + " + str(i)+"/"+str(i+1)
+    return final_string
+
+print(sum_fraction_sequence(3))

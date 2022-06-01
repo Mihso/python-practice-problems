@@ -13,4 +13,11 @@
 # Look up the zip function to help you with this problem.
 
 def pairwise_add(list1, list2):
-    pass
+    pairs_list = zip(list1,list2)
+    final_list = []
+    for a,b in pairs_list:
+        final_list.append(a+b)
+    return final_list
+
+print(pairwise_add([1,3,6],[2,6,8]))
+

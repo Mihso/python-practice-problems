@@ -14,4 +14,8 @@
 #      returns: "basia.farid"
 #    * input:   "basia_farid+test@yahoo.com"
 #      returns: "basia_farid+test"
+def username_from_email(email):
+    divide = email.split("@")
+    return divide[0]
 
+print(username_from_email("basia.farid@yahoo.com"))

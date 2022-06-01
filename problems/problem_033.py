@@ -15,5 +15,18 @@
 # Write out some pseudocode before trying to solve the
 # problem to get a good feel for how to solve it.
 
+#input: a number
+#output: the sum of the first input amount of even numbers starting from zero
+#conditions:
+#if input is less than zero, return none
+#otherwise, return sum of even numbers
+
 def sum_of_first_n_even_numbers(n):
-    pass
+    if n < 0:
+        return None
+    else:
+        total = 0
+        for i in range(0, n+1):
+            total = total + (i*2)
+        return total
+print(sum_of_first_n_even_numbers(0))

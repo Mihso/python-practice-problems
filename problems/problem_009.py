@@ -13,4 +13,26 @@
 # problem to get a good feel for how to solve it.
 
 def is_palindrome(word):
-    pass
+    r_word = reversed(word)
+    joined_word = "".join(r_word)
+    print(joined_word)
+
+    if word == joined_word:
+        return True
+    else:
+        return False
+
+word_one = "hello"
+word_two = "racecar"
+
+word_two.join
+
+result = is_palindrome(word_two)
+print(result)
+
+#input:
+# word
+#output: true or false
+#conditions:
+#uses built in reversed function and join method
+# checks if word is the same forwards and backwards.

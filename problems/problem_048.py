@@ -26,3 +26,15 @@
             # counts[word] = 0
         # add one to counts[word]
     # return counts
+
+def count_word_frequencies(sentence):
+    words = sentence.split(" ")
+    counts = {}
+    for i in words:
+        if counts.get(i) == None:
+            counts[i] = 1
+        else:
+            counts[i] = counts[i]+1
+    return counts
+
+print(count_word_frequencies("I came I saw I heard"))

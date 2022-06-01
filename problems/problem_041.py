@@ -20,5 +20,22 @@
 
 # Write out your own pseudocode to help guide you.
 
+#input: list of strings
+#output: list of strings added together
+# conditions: loop through each item in input
+    # create new list by splitting string by "," and converting each into an integer
+    #create variable that sums all the integers
+    #append variable to the return list
+
 def add_csv_lines(csv_lines):
-    pass
+    final_list = []
+    for i in csv_lines:
+        temp_list = i.split(",")
+        sum = 0
+        for n in temp_list:
+            sum = sum + int(n)
+        final_list.append(sum)
+    return final_list
+
+print(add_csv_lines(["1","2,5", "3,4,5"]))
+

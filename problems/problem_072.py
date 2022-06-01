@@ -27,4 +27,26 @@
 # Do it without pseudocode, this time, from memory. Don't look
 # at the last one you just wrote unless you really must.
 
+class Person:
+    def __init__(self, name, hated_foods, loved_foods):
+        self.name = name
+        self.hated_foods = hated_foods
+        self.loved_foods = loved_foods
 
+    def taste(self, food):
+        for f in self.hated_foods:
+            if food == f:
+                return False
+        for f in self.loved_foods:
+            if food == f:
+                return True
+            else:
+                return None
+
+person = Person("Malik",
+["cottage cheese", "sauerkraut"],
+["pizza", "schnitzel"])
+
+print(person.taste("lasagna"))     # Prints None, not in either list
+print(person.taste("sauerkraut"))  # Prints False, in the hated list
+print(person.taste("pizza"))       # Prints True, in the loved list

@@ -15,3 +15,18 @@
 #
 # https://docs.python.org/3/library/random.html
 
+#write a function that genereates 6 random numbers between 1 and 40 inclusively
+
+import random
+
+def generate_lottery_numbers():
+    numbers = []
+    while len(numbers) < 6:
+        number = random.randint(1,40)
+        if number not in numbers:
+            numbers.append(number)
+    return numbers
+
+result = generate_lottery_numbers()
+
+print(result)

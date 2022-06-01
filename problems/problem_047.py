@@ -13,4 +13,29 @@
 # like ".isalpha", ".isdigit", ".isupper", and ".islower"
 
 def check_password(password):
-    pass
+    num_letters = 0
+    num_numbers = 0
+    num_upper = 0
+    num_lower = 0
+    num_special = 0
+    if len(password) <= 12 and len(password) >=6:
+        for n in password:
+            if n.isalpha():
+                num_letters = num_letters + 1
+                if n.isupper():
+                    num_upper = num_upper + 1
+                elif n.islower():
+                    num_lower = num_lower + 1
+            elif n.isdigit():
+                num_numbers = num_numbers + 1
+            else:
+                num_special = num_special + 1
+    else:
+        return False
+    print(num_letters, num_lower, num_numbers, num_special, num_upper)
+    if num_numbers > 0 and num_upper >0 and num_lower >0 and num_special > 0:
+        return True
+    else:
+        return False
+
+print(check_password("Moshimo12@"))

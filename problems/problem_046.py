@@ -28,4 +28,11 @@
 # at the last one you just wrote unless you really must.
 
 def make_sentences(subjects, verbs, objects):
-    pass
+    final_list = []
+    for s in subjects:
+        for v in verbs:
+            for o in objects:
+                final_list.append(s +" "+ v +" "+ o)
+    return final_list
+
+print(make_sentences(["I", "You"],["play", "watch"],["Portal", "Sable"]))
