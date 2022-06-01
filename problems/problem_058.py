@@ -22,3 +22,18 @@
 #
 # You may want to look up the ".strip()" method for the string.
 
+def group_cities_by_state(city_list):
+    final_dict = {}
+    for i in city_list: # create keys in final_dict early so that cities can be appended to them later
+        words = i.split(", ")
+        state = words[1]
+        final_dict[state] = []
+    for i in city_list:
+        words = i.split(", ")
+        state = words[1]
+        city = words[0]
+        final_dict[state].append(city)
+    return final_dict
+
+print(group_cities_by_state(["Cleveland, OH", "Columbus, OH", "Chicago, IL"]))
+

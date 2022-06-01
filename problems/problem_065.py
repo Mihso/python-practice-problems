@@ -17,3 +17,14 @@
 #
 # You may want to look at the built-in "abs" function
 
+def biggest_gap(numbers):
+    highest = 0
+    lowest = numbers[0]
+    for n in numbers:
+        if n > highest:
+            highest = n
+        elif n < lowest:
+            lowest = n
+    return highest - lowest
+
+print(biggest_gap([1,5,50,23,7]))

@@ -15,3 +15,13 @@
 #    * input:   "raise"
 #      RAISES:  ValueError
 
+from tabnanny import check
+
+
+def check_input(var):
+    if var == "raise":
+        raise ValueError("error")
+    else:
+        return var
+
+print(check_input("raise"))

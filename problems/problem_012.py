@@ -15,5 +15,20 @@
 # Write out some pseudocode before trying to solve the
 # problem to get a good feel for how to solve it.
 
+#input: a number
+#output: either "fizzbuzz", "fizz", "buzz", or the number
+#conditions:
+# if both divisible by 3 and 5, return fizzbuzz
+# if only divisible by 3, reutrn fizz
+# if only divisible by 5, return buzz
+# if divisible by neither, return the number
+
 def fizzbuzz(number):
-    pass
+    if number % 3 == 0 and number % 5 == 0:
+        return "fizzbuzz"
+    elif number % 3 == 0:
+        return "fizz"
+    elif number % 5 == 0:
+        return "buzz"
+    else:
+        return number

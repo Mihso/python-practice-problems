@@ -11,4 +11,15 @@
 # If the list is empty, then return the empty string.
 
 def remove_duplicate_letters(s):
-    pass
+    if len(s) == 0:
+        return s
+    else:
+        comp = ""
+        comp_list={} # create list of unqiue letters that have been found
+        for n in s:
+            comp_list[n] = 1 # the value of the key at comp_list[n] doesn't matter as much as the fact that the comp_list[n] key exists at all.
+        for n in comp_list:
+            comp = comp + n # add the key at n to comp
+        return comp
+
+print(remove_duplicate_letters("abbxxxssss"))

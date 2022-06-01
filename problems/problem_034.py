@@ -22,4 +22,13 @@
 
 
 def count_letters_and_digits(s):
-    pass
+    num_digits = 0
+    num_letters = 0
+    for i in s:
+        if i.isdigit():
+            num_digits = num_digits + 1
+        elif i.isalpha():
+            num_letters = num_letters + 1
+    return num_letters, num_digits
+
+print(count_letters_and_digits("pizza1203"))

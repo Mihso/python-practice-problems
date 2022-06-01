@@ -9,5 +9,33 @@
 # Write out some pseudocode before trying to solve the
 # problem to get a good feel for how to solve it.
 
+# input:
+# age
+# has_consent_form
+
+# output:
+# true or false
+
+#conditions:
+#compare age to the number 18, check if has_consent_form is true
+# if age > 18 and if has_consent_true is true
+# return true
+
+from operator import truediv
+
+
 def can_skydive(age, has_consent_form):
-    pass
+    if age > 18 or has_consent_form:
+        return True
+    else:
+        return False
+
+age_one = 25
+has_consent_form_one = True
+
+age_two = 17
+has_consent_form_two = False
+
+result_one = can_skydive(age_one, has_consent_form_one)
+
+print(result_one)

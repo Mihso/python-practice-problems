@@ -13,5 +13,22 @@
 # Write out some pseudocode before trying to solve the
 # problem to get a good feel for how to solve it.
 
+#input: list of values
+#output: None if no values in list, sum of each item squared
+
+#conditions:
+# if no values in list, return None
+# go through each value in list
+# add each value squared to a variable
+# return variable
+
 def sum_of_squares(values):
-    pass
+    if len(values) == 0:
+        return None
+    else:
+        total = 0
+        for n in values:
+            total = total + (n*n)
+        return total 
+
+print(sum_of_squares([1,0,-1]))

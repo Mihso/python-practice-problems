@@ -21,3 +21,18 @@
 # You may want to look at the built-in Python functions
 # "ord" and "chr" for this problem
 
+def shift_letters(word):
+    new_word = ""
+    for n in word:
+        if n == "z" or n == "Z":
+            letter = ord(n)
+            letter = letter - 25
+            letter = chr(letter)
+        else:
+            letter = ord(n)
+            letter = letter + 1
+            letter = chr(letter)
+        new_word = new_word + letter
+    return new_word
+
+print(shift_letters("Zello"))
