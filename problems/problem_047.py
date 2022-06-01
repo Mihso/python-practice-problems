@@ -17,8 +17,8 @@ def check_password(password):
     num_numbers = 0
     num_upper = 0
     num_lower = 0
-    num_special = 0
-    if len(password) <= 12 and len(password) >=6:
+    num_special = 0 # number of special characters
+    if len(password) <= 12 and len(password) >=6: # check length of password so that it's <= 12 and >= 6
         for n in password:
             if n.isalpha():
                 num_letters = num_letters + 1

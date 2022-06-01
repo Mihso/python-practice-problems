@@ -30,4 +30,5 @@ def minimum_value(value1, value2):
 
 #conditions:
 #if value1 < value2:
-#
+#if value2 < value1:
+# if they are the same value
