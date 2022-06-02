@@ -50,18 +50,18 @@ class Animal:
 
 class Dog(Animal):
     def __init__(self, number_of_legs, primary_color):
-        super.__init__(number_of_legs, primary_color)
+        super().__init__(number_of_legs, primary_color)
     def speak(self):
         return "Bark!"
 
 class Cat(Animal):
     def __init__(self, number_of_legs, primary_color):
-        super.__init__(number_of_legs, primary_color)
+        super().__init__(number_of_legs, primary_color)
     def speak(self):
         return "Miao!"
         
 class Snake(Animal):
     def __init__(self, number_of_legs, primary_color):
-        super.__init__(number_of_legs, primary_color)
+        super().__init__(number_of_legs, primary_color)
     def speak(self):
         return "Sssssss!"

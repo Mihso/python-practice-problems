@@ -14,8 +14,8 @@ class BankAccount:
     def withdraw(self, amount):
         # If the amount is more than what is in
         # the balance, then raise a ValueError
-        if self.balance > amount:
-            raise ValueError
+        if self.balance < amount:
+            raise ValueError("error")
         else:
             self.balance -= amount
 

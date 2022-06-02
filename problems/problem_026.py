@@ -17,7 +17,10 @@ def calculate_grade(values):
     average = 0
     for n in values:
         total = total + n
-    average = total/len(values)
+    if len(values) <= 0 :
+        return None
+    else:
+        average = total/len(values)
 
     if average >= 90:
         return "A"

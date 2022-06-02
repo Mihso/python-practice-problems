@@ -27,7 +27,7 @@ def count_letters_and_digits(s):
     num_letters = 0
     num_digits = 0
     for i in s:
-        if i.isletter():
+        if i.isalpha():
             num_letters = num_letters + 1
         elif i.isdigit():
             num_digits = num_digits + 1

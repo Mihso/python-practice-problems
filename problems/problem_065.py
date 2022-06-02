@@ -18,13 +18,10 @@
 # You may want to look at the built-in "abs" function
 
 def biggest_gap(numbers):
-    highest = 0
-    lowest = numbers[0]
-    for n in numbers:
-        if n > highest:
-            highest = n
-        elif n < lowest:
-            lowest = n
-    return highest - lowest
+    gap = 0
+    for n in range(0, len(numbers)-1):
+        if abs(numbers[n] - numbers[n+1]) > gap:
+            gap = abs(numbers[n]- numbers[n+1])
+    return gap
 
 print(biggest_gap([1,5,50,23,7]))
